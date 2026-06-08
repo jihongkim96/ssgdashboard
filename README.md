@@ -1,1 +1,56 @@
-# ssgdashboard
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSG 5월 실적 대시보드</title>
+<style>
+:root{--navy:#173a66;--blue:#356dc9;--light:#f5f8fc;--line:#d9e2ef;--red:#c84545;--green:#14804a;--text:#1e293b}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif;margin:0;background:#f6f8fb;color:var(--text)}
+.wrap{max-width:1120px;margin:0 auto;padding:34px 24px}
+.header{border-bottom:4px solid var(--navy);padding-bottom:16px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:flex-end}
+.header h1{margin:0;font-size:28px;color:var(--navy)} .meta{color:#64748b;font-size:13px;text-align:right}
+.card{background:white;border:1px solid var(--line);border-radius:16px;padding:22px;margin:18px 0;box-shadow:0 4px 12px rgba(15,23,42,.04)}
+.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.section-title h2{margin:0;font-size:21px;color:#0f2f56} .pill{border:1px solid var(--line);border-radius:999px;padding:7px 12px;background:#fff;color:#64748b;font-size:12px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px} .kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}
+.kpi .label{font-size:13px;color:#64748b} .kpi .num{font-size:28px;font-weight:800;color:var(--navy);margin:8px 0} .up{color:var(--green);font-weight:700} .down{color:var(--red);font-weight:700}
+.note{border-left:5px solid var(--navy);background:#f8fbff;padding:14px 16px;margin-top:16px;border-radius:8px;line-height:1.55;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:14px} th{text-align:left;color:#64748b;border-bottom:3px solid var(--navy);padding:12px 10px} td{padding:11px 10px;border-bottom:1px solid #edf2f7} tbody tr:hover{background:#f8fbff} td:nth-child(n+2), th:nth-child(n+2){text-align:right}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px} .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.chart h3{font-size:16px;margin:0 0 16px;color:#0f2f56} .barrow{display:grid;grid-template-columns:95px 1fr 78px;gap:10px;align-items:center;margin:12px 0} .barlabel{font-weight:700;font-size:13px} .bartrack{height:24px;background:#edf2f7;border-radius:999px;overflow:hidden} .bar{height:100%;background:linear-gradient(90deg,#b9c8de,#356dc9);border-radius:999px} .barval{text-align:right;font-weight:700;color:#334155;font-size:13px}
+.tag{font-weight:800;color:var(--navy)} .small{font-size:12px;color:#64748b;line-height:1.5} .action{display:grid;grid-template-columns:130px 1fr 170px;gap:12px;border-bottom:1px solid #edf2f7;padding:14px 0} .stars{font-size:18px;color:#e2a300;font-weight:900} .goal{font-weight:800;color:var(--navy)}
+@media (max-width:800px){.kpis,.grid2,.grid3{grid-template-columns:1fr}.action{grid-template-columns:1fr}.barrow{grid-template-columns:75px 1fr 70px}}
+</style></head><body><div class="wrap">
+<div class="header"><h1>SSG 5월 실적 대시보드</h1><div class="meta">분석 기준: 2026년 5월<br>Source: 2501-2605_SSG.xlsx / PB 취소·반품 제외</div></div>
+
+<div class="card"><div class="section-title"><h2>실적 현황</h2><span class="pill">단위: 억원</span></div>
+<div class="kpis">
+<div class="kpi"><div class="label">26년 5월 총 주문액</div><div class="num">0.95억</div><div class="up">YoY +14.5%</div></div>
+<div class="kpi"><div class="label">MoM</div><div class="num">-46.9%</div><div class="small">4월 1.80억 → 5월 0.95억</div></div>
+<div class="kpi"><div class="label">1~5월 누적 주문액</div><div class="num">6.51억</div><div class="small">PB + EP 외부몰판매가 기준</div></div>
+<div class="kpi"><div class="label">5월 EP 공헌이익률</div><div class="num">20.0%</div><div class="small">EP 정산 데이터 기준</div></div>
+</div>
+<table><thead><tr><th>월</th><th>주문액</th><th>PB주문액</th><th>EP_GMV</th><th>EP순매출액</th><th>EP공헌이익</th><th>EP공헌이익율</th></tr></thead><tbody><tr><td>01월</td><td>1.39억</td><td>1.08억</td><td>0.31억</td><td>0.25억</td><td>0.04억</td><td>16.7%</td></tr><tr><td>02월</td><td>1.71억</td><td>1.43억</td><td>0.28억</td><td>0.22억</td><td>0.05억</td><td>22.0%</td></tr><tr><td>03월</td><td>0.66억</td><td>0.52억</td><td>0.14억</td><td>0.12억</td><td>0.03억</td><td>26.0%</td></tr><tr><td>04월</td><td>1.80억</td><td>1.78억</td><td>0.02억</td><td>0.01억</td><td>0.00억</td><td>20.0%</td></tr><tr><td>05월</td><td>0.95억</td><td>0.95억</td><td>0.01억</td><td>0.00억</td><td>0.00억</td><td>20.0%</td></tr></tbody></table>
+<div class="note">5월 총 주문액은 0.95억로 전년 5월 0.83억 대비 +14.5%입니다. 4월 대비로는 -46.9%로 하락했으며, 5월은 PB 주문 중심으로 실적이 형성되고 EP 비중은 제한적입니다.</div></div>
+
+<div class="grid2"><div class="card"><div class="chart"><h3>월별 주문액 추이</h3><div class="barrow"><div class="barlabel">01월</div><div class="bartrack"><div class="bar" style="width:77.2%"></div></div><div class="barval">1.39억</div></div><div class="barrow"><div class="barlabel">02월</div><div class="bartrack"><div class="bar" style="width:95.1%"></div></div><div class="barval">1.71억</div></div><div class="barrow"><div class="barlabel">03월</div><div class="bartrack"><div class="bar" style="width:36.9%"></div></div><div class="barval">0.66억</div></div><div class="barrow"><div class="barlabel">04월</div><div class="bartrack"><div class="bar" style="width:100.0%"></div></div><div class="barval">1.80억</div></div><div class="barrow"><div class="barlabel">05월</div><div class="bartrack"><div class="bar" style="width:53.1%"></div></div><div class="barval">0.95억</div></div></div></div><div class="card"><div class="chart"><h3>카테고리별 5월 주문액</h3><div class="barrow"><div class="barlabel">거실</div><div class="bartrack"><div class="bar" style="width:100.0%"></div></div><div class="barval">0.19억</div></div><div class="barrow"><div class="barlabel">침실</div><div class="bartrack"><div class="bar" style="width:95.7%"></div></div><div class="barval">0.19억</div></div><div class="barrow"><div class="barlabel">수납</div><div class="bartrack"><div class="bar" style="width:94.1%"></div></div><div class="barval">0.18억</div></div><div class="barrow"><div class="barlabel">주방</div><div class="bartrack"><div class="bar" style="width:75.8%"></div></div><div class="barval">0.15억</div></div><div class="barrow"><div class="barlabel">키즈</div><div class="bartrack"><div class="bar" style="width:61.3%"></div></div><div class="barval">0.12억</div></div><div class="barrow"><div class="barlabel">서재</div><div class="bartrack"><div class="bar" style="width:49.7%"></div></div><div class="barval">0.10억</div></div></div></div></div>
+
+<div class="card"><div class="section-title"><h2>상품 분석</h2><span class="pill">상품번호 기준</span></div>
+<div class="grid2"><div><h3>🏆 BEST 7 상품</h3><table><thead><tr><th>상품명</th><th>카테고리</th><th>26년 5월</th><th>25년 5월</th><th>YoY</th></tr></thead><tbody><tr><td>[신세계몰] 한샘 엠마 컴포트 천연면피가죽 3인용 소파(3종/택1)</td><td>거실</td><td>0.03억</td><td>0.00억</td><td>-</td></tr><tr><td>[이마트몰] 한샘 엠마 컴포트 천연면피가죽 4인용 소파(3종/택1)</td><td>거실</td><td>0.03억</td><td>0.00억</td><td>-</td></tr><tr><td>[신세계몰] 한샘 엠마 컴포트 천연면피가죽 4인용 소파(3종/택1)</td><td>거실</td><td>0.03억</td><td>0.02억</td><td>+0.8%</td></tr><tr><td>[이마트몰] 한샘 도노 내추럴 세라믹 와이드4인 타원식탁세트 (플레인의자4 포함)</td><td>주방</td><td>0.02억</td><td>0.00억</td><td>-</td></tr><tr><td>[신세계몰] 한샘 리도 천연가죽 소파 3인용</td><td>거실</td><td>0.02억</td><td>0.01억</td><td>+114.4%</td></tr><tr><td>[신세계몰] 한샘 스테디 컴피 패밀리침대 SS+SS 양쪽가드형 데이베드 (매트별도)</td><td>침실</td><td>0.02억</td><td>0.00억</td><td>-</td></tr><tr><td>[이마트몰] 한샘 엠마 컴포트 천연면피가죽 3인용 소파(3종/택1)</td><td>거실</td><td>0.02억</td><td>0.00억</td><td>-</td></tr></tbody></table></div>
+<div><h3>📉 WORST 7 상품</h3><table><thead><tr><th>상품명</th><th>카테고리</th><th>25년 5월</th><th>26년 5월</th><th>증감액</th><th>YoY</th></tr></thead><tbody><tr><td>[신세계몰] 한샘 클로즈 침대SS 서랍형+노뜨 베이직 매트리스</td><td>침실</td><td>0.01억</td><td>0.00억</td><td>-0.01억</td><td>-100.0%</td></tr><tr><td>[이마트몰] 한샘 멜로우 Q 퀸 침대 (매트별도)</td><td>침실</td><td>0.01억</td><td>0.00억</td><td>-0.01억</td><td>-100.0%</td></tr><tr><td>[신세계몰] 한샘 티오 단독책상세트 5단 140cm + 다이브 의자 SET (컬러 택1)</td><td>서재</td><td>0.01억</td><td>0.00억</td><td>-0.01억</td><td>-100.0%</td></tr><tr><td>[신세계몰] 한샘 아임빅 수납침대 SS 일반헤드+노뜨 베이직 매트리스</td><td>침실</td><td>0.01억</td><td>0.00억</td><td>-0.01억</td><td>-100.0%</td></tr><tr><td>[신세계몰] 한샘 스테디2 패밀리침대 Q+SS_양쪽가드(색상2종)+노뜨컴포트</td><td>침실</td><td>0.01억</td><td>0.00억</td><td>-0.01억</td><td>-100.0%</td></tr><tr><td>[신세계몰] 한샘 샘베딩 퓨어 옷장세트 160cm(높이194cm) 서랍형</td><td>수납</td><td>0.01억</td><td>0.00억</td><td>-0.01억</td><td>-100.0%</td></tr><tr><td>[신세계몰] (한샘몰pick) 보니애 밀리아 낮은 세라믹 식탁 세트 4인용 (소파벤치형)</td><td>주방</td><td>0.01억</td><td>0.00억</td><td>-0.01억</td><td>-100.0%</td></tr></tbody></table></div></div>
+<div class="note">5월 상위 상품과 하락 상품을 나눠 보면, 단순히 전체 실적만 보는 것보다 어떤 상품군이 볼륨을 만들었고 어떤 상품이 전년 대비 빠졌는지 바로 확인할 수 있습니다.</div></div>
+
+<div class="card"><div class="section-title"><h2>카테고리 분석</h2><span class="pill">25년 5월 vs 26년 5월</span></div>
+<table><thead><tr><th>카테고리</th><th>25년 5월</th><th>26년 5월</th><th>26년 비중</th><th>YoY</th></tr></thead><tbody><tr><td>거실</td><td>0.14억</td><td>0.19억</td><td>21.0%</td><td>+43.7%</td></tr><tr><td>침실</td><td>0.16억</td><td>0.19억</td><td>20.1%</td><td>+14.5%</td></tr><tr><td>수납</td><td>0.15억</td><td>0.18억</td><td>19.7%</td><td>+19.3%</td></tr><tr><td>주방</td><td>0.13억</td><td>0.15억</td><td>15.9%</td><td>+11.4%</td></tr><tr><td>키즈</td><td>0.09억</td><td>0.12억</td><td>12.9%</td><td>+35.5%</td></tr><tr><td>서재</td><td>0.11억</td><td>0.10억</td><td>10.4%</td><td>-8.9%</td></tr></tbody></table>
+<div class="note">26년 5월 기준 상위 카테고리는 거실, 침실, 수납 순입니다. 전년 대비 성장 상위는 거실, 키즈, 감소 영향이 큰 카테고리는 서재, 주방입니다.</div></div>
+
+<div class="card"><div class="section-title"><h2>EP 수익성 분석</h2><span class="pill">EP 정산 기준</span></div>
+<div class="grid3"><div class="kpi"><div class="label">5월 EP GMV</div><div class="num">0.01억</div></div><div class="kpi"><div class="label">5월 EP 순매출</div><div class="num">0.00억</div></div><div class="kpi"><div class="label">5월 EP 이익</div><div class="num">0.00억</div></div></div>
+<table><thead><tr><th>카테고리</th><th>GMV</th><th>순매출</th><th>이익</th><th>이익률</th><th>건수</th></tr></thead><tbody><tr><td>주방</td><td>0.01억</td><td>0.00억</td><td>0.00억</td><td>20.0%</td><td>8</td></tr></tbody></table>
+<div class="note">현재 Raw 기준으로 공헌이익률은 EP 데이터에서만 산출 가능합니다. PB 원가/수수료/쿠폰비가 추가되면 지마켓 리포트처럼 전체 공헌이익률까지 확장 가능합니다.</div></div>
+
+<div class="card"><div class="section-title"><h2>6월 액션 플랜 제안</h2><span class="pill">데이터 기반 초안</span></div>
+<div class="action"><div class="stars">★★★ 최우선</div><div><b>상위 카테고리 집중 운영</b><br><span class="small">5월 주문액 상위 카테고리 중심으로 노출·쿠폰·상품 재고를 집중해 단기 볼륨 회복.</span></div><div class="goal">목표: 상위 3개 카테고리 +20%</div></div>
+<div class="action"><div class="stars">★★★ 최우선</div><div><b>WORST 상품 대체/가격 점검</b><br><span class="small">전년 대비 하락액이 큰 상품은 가격비교, 쿠폰 적용, 대체 상품 운영 여부를 우선 점검.</span></div><div class="goal">목표: 감소 상품 손실 30% 회복</div></div>
+<div class="action"><div class="stars">★★☆ 우선</div><div><b>PB 중심 실적 보완 + EP 확장</b><br><span class="small">5월은 PB 중심으로 실적이 형성되어 EP 기여도가 낮음. EP 상품군은 고효율 카테고리 중심으로 확대 검토.</span></div><div class="goal">목표: EP GMV 2배</div></div>
+<div class="action"><div class="stars">★☆☆ 보완</div><div><b>대시보드 추가 데이터 연동</b><br><span class="small">프로모션, 광고비, 쿠폰비, 방문자/전환율 데이터가 붙으면 원인분석 수준이 지마켓 리포트와 동일하게 고도화 가능.</span></div><div class="goal">필요: 행사/광고 Raw</div></div>
+</div>
+<div class="small">※ 주문액은 PB 최종금액 + EP 외부몰판매가 기준입니다. PB 취소/반품 상태는 제외했습니다. EP 수익성은 EP 정산 데이터만 반영했습니다.</div>
+</div></body></html># ssgdashboard
